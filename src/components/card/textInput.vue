@@ -22,7 +22,7 @@
         }, 
         methods: {
             textChanged: function () {
-                this.$emit('displayTextChanged', this.textBoxInput)
+                this.$emit('displayTextChanged', this.textboxInput)
             }
         }
     }
