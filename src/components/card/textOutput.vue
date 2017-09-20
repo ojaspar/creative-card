@@ -27,7 +27,7 @@
 
 </script>
 
-<style>
+<style scoped>
     p {
         font-family: 'Tangerine', cursive;
         font-size: 42px;
