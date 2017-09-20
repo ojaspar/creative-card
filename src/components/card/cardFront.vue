@@ -10,10 +10,11 @@
             {{textBoxValue3}}
         </div>
          <div class="col-sm-6 card card-display">
-         {{imageName}}
-        <cctextOutput :displayText="textBoxValue1" :containerHeight="130"></cctextOutput>
-        <cctextOutput :displayText="textBoxValue2" :containerHeight="130"></cctextOutput>
-        <cctextOutput :displayText="textBoxValue3" :containerHeight="130"></cctextOutput>
+         
+            <cctextOutput :displayText="textBoxValue1" :containerHeight="130"></cctextOutput>
+            <cc-image-output :displayImage="imageName" :containerHeight="350"></cc-image-output>
+            <cctextOutput :displayText="textBoxValue2" :containerHeight="130"></cctextOutput>
+            <cctextOutput :displayText="textBoxValue3" :containerHeight="130"></cctextOutput>
         </div>
     </div>
 </template>
@@ -21,6 +22,8 @@
     import textInput from './textInput.vue'
     import textOutput from './textOutput.vue'
     import ImageUpload from './ImageUpload.vue'
+    import ImageOutput from './ImageOutput.vue'
+
     export default {
         data: function(){
             return {
@@ -33,7 +36,8 @@
         components: {
             cctextInput: textInput,
             cctextOutput: textOutput,
-            ccImageUpload: ImageUpload
+            ccImageUpload: ImageUpload,
+            ccImageOutput: ImageOutput
         }
     }
 </script>
