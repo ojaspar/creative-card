@@ -1,6 +1,8 @@
 <template>
     <div>
-        <P>{{displayText}}</p>
+        <P :style="styleObject">
+        {{displayText}}
+        </p>
     
     </div>
 
@@ -12,6 +14,13 @@
             containerHeight: {
                 type: Number,
                 default: 200
+            }
+        },
+        computed: {
+            styleObject: function(){
+                return {
+                    height: this.containerHeight + 'px'
+                }
             }
         } 
     }
