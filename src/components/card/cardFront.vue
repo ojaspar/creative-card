@@ -9,9 +9,9 @@
             {{textBoxValue3}}
         </div>
          <div class="col-sm-6 card card-display">
-        <cctextOutput :displayText="textBoxValue1"></cctextOutput>
-        <cctextOutput :displayText="textBoxValue2"></cctextOutput>
-        <cctextOutput :displayText="textBoxValue3"></cctextOutput>
+        <cctextOutput :displayText="textBoxValue1" :containerHeight="130"></cctextOutput>
+        <cctextOutput :displayText="textBoxValue2" :containerHeight="130"></cctextOutput>
+        <cctextOutput :displayText="textBoxValue3" :containerHeight="130"></cctextOutput>
         </div>
     </div>
 </template>
