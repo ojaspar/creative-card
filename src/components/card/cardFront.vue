@@ -32,7 +32,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
     .edit-area{
         background: #d2f9f9;
         padding:20px;
