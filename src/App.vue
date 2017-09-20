@@ -5,8 +5,9 @@
     <div class="row">
       <div class="col-md-12">
         <nav-header v-on:pageWasChanged="currentPage = $event"> </nav-header>
+      <keep-alive>
         <component v-bind:is="currentPage"></component>
-
+      </keep-alive>
       </div>
     </div>
   
