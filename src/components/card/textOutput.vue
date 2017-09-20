@@ -31,7 +31,7 @@
     p {
         font-family: 'Tangerine', cursive;
         font-size: 42px;
-        line-height: 422px;
+        line-height: 42px;
         text-shadow: 2px 2px 2px #aaa;
         color: #4d4d4d;
         margin: 5px 0;
@@ -39,6 +39,7 @@
         white-space: pre-line;
         overflow: hidden;
         padding: 10px;
+    
     }
 
 </style>
