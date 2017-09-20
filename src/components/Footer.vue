@@ -1,17 +1,10 @@
 <template>
     <footer>
-        <slot>
-            <p>Footer text</p>        
-        </slot>
+        <slot name="app-name"></slot>
+        <slot></slot>
     </footer>
 </template>
 
 <script>
-    export default {
-    data: function() {
-      return {
-        appName: '&copy;Creative Cards'
-      }
-    }
- }
+  
 </script>
