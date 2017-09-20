@@ -6,8 +6,8 @@
                     <input type="file" class="form-control-file" id="fileUpload"@change="uploadFile">
                 </div>
                 <br>
-                <img id="image">
-                <button type="button" id="setImageButton">Set Image</button>
+                    <img id="image">
+                    <button type="button" id="setImageButton">Set Image</button>
         </div>
     </div>
 
@@ -27,11 +27,20 @@ import Firebase from 'firebase'
               this.file = event.target.files[0]
               var staorageRef = Firebase.storage().ref('user_uploads/' + this.file.name)
               staorageRef.put(this.file)
+
+              var reader = new FileReader()
+              reader.readAsDataURL(this.file)
+
+              reader.onload = function(e) {
+                  document.getElementById('image').src = e.target.result
+              }
            }
        }
    } 
 </script>
-<style>
-
+<style scoped>
+img {
+    max-width: 200px;
+}
 
 </style>
