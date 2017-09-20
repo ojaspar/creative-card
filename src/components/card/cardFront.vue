@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-sm-6 card edit-area">
             <cctext-input @displayTextChanged="textBoxValue1 = $event"></cctext-input>
+            <cc-image-upload></cc-image-upload><hr>
             <cctext-input @displayTextChanged="textBoxValue2 = $event"></cctext-input>
             <cctext-input @displayTextChanged="textBoxValue3 = $event"></cctext-input>
             {{textBoxValue1}}
@@ -18,6 +19,7 @@
 <script>
     import textInput from './textInput.vue'
     import textOutput from './textOutput.vue'
+    import ImageUpload from './ImageUpload.vue'
     export default {
         data: function(){
             return {
@@ -28,7 +30,8 @@
         },
         components: {
             cctextInput: textInput,
-            cctextOutput: textOutput
+            cctextOutput: textOutput,
+            ccImageUpload: ImageUpload
         }
     }
 </script>
