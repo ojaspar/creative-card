@@ -11,9 +11,9 @@
             displayText: [String],
             containerHeight: {
                 type: Number,
-                required: true
+                default: 200
             }
-        } ['displayText', 'containerHeight']
+        } 
     }
 
 </script>
