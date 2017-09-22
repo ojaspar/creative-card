@@ -9,6 +9,23 @@
                         <option value="56">56px</option>        
                         <option value="64">64px</option>        
                     </select>
+
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="left" v-model="setTextAlign">Left
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="center" v-model="setTextAlign">Center
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="Right" v-model="setTextAlign">Right
+                        </label>
+                    </div>
+                
             </form>
             <P :style="styleObject">
             {{displayText}}
@@ -29,14 +46,16 @@
         data: function() {
             return {
                 showOptions: false,
-                setFontSize: ''
+                setFontSize: '',
+                setTextAlign: '',
             }
         },
         computed: {
             styleObject: function(){
                 return {
                     fontSize: this.setFontSize + 'px',
-                    height: this.containerHeight + 'px'
+                    height: this.containerHeight + 'px',
+                    textAlign: this.setTextAlign,
                 }
             }
         } 
