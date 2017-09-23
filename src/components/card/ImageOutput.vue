@@ -1,5 +1,12 @@
 <template>
-    <div class="img-container" :style="styleObject">
+    <div class="img-container" :style="styleObject" 
+            @mouseover="showOptions= true"
+            @mouseleave="showOptions=false">
+        <button type="button"
+            class="btn btn-outline-danger btn-sm" 
+            v-show="showOptions" 
+            @click="clearImageProp">Remove Image
+        </button>
         <img id="outputImage">{{ displayImage}}
     
     </div>
@@ -15,6 +22,12 @@ import Firebase from 'firebase'
             containerHeight: {
                 type: Number,
                 default: 200
+            },
+            clearImageProp: Function
+        },
+        data: function(){
+            return {
+                showOptions: false
             }
         },
         watch: {
@@ -22,7 +35,7 @@ import Firebase from 'firebase'
             var storageRef = Firebase.storage().ref('user_uploads/' + this.displayImage)
             storageRef.getDownloadURL().then(function(url) {
              var img = document.getElementById('outputImage')
-             img.src = url
+             img.src = url 
             })
 
             }
@@ -43,5 +56,9 @@ import Firebase from 'firebase'
         overflow:hidden;
         margin: 5px 0;
         
+    }
+    button {
+        position: absolute;
+        z-index: 1;
     }
 </style>

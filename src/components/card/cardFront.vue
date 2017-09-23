@@ -12,7 +12,7 @@
          <div class="col-sm-6 card card-display">
          
             <cctextOutput :displayText="textBoxValue1" :containerHeight="130"></cctextOutput>
-            <cc-image-output :displayImage="imageName" :containerHeight="350"></cc-image-output>
+            <cc-image-output :displayImage="imageName" :containerHeight="350" :clearImageProp="clearImage"></cc-image-output>
             <cctextOutput :displayText="textBoxValue2" :containerHeight="130"></cctextOutput>
             <cctextOutput :displayText="textBoxValue3" :containerHeight="130"></cctextOutput>
         </div>
@@ -31,6 +31,13 @@
                 textBoxValue2: '',
                 textBoxValue3: '',
                 imageName: ''
+            }
+        },
+        methods: {
+            clearImage: function () {
+                if(this.imageName != ''){
+               this.imageName = 'Dubem 20170214_090429.jpg' 
+                }
             }
         },
         components: {
