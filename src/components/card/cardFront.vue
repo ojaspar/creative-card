@@ -6,7 +6,8 @@
             <cc-image-upload @displayImageChanged="imageName = $event"></cc-image-upload><hr>
             <cctext-input @displayTextChanged="textBoxValue2 = $event"></cctext-input>
             <cctext-input @displayTextChanged="textBoxValue3 = $event"></cctext-input>
-            
+            <ccsection-completed></ccsection-completed>
+
             {{textBoxValue1}}
             {{textBoxValue2}}
             {{textBoxValue3}}
@@ -25,6 +26,7 @@
     import textOutput from './textOutput.vue'
     import ImageUpload from './ImageUpload.vue'
     import ImageOutput from './ImageOutput.vue'
+    import sectionCompleted from './sectionCompleted.vue'
 
     export default {
         data: function(){
@@ -46,7 +48,8 @@
             cctextInput: textInput,
             cctextOutput: textOutput,
             ccImageUpload: ImageUpload,
-            ccImageOutput: ImageOutput
+            ccImageOutput: ImageOutput,
+            ccsectionCompleted: sectionCompleted
         }
     }
 </script>

@@ -22,6 +22,8 @@ import App from './App.vue'
 // var component2 ={
 //   template: '<p>Component2</p>'
 // }
+
+export const EventBus = new Vue();
 new Vue({
   el: '#app',
   // registering components enternally
