@@ -1,10 +1,12 @@
 <template>
     <div class="row">
         <div class="col-sm-6 card edit-area">
+
             <cctext-input @displayTextChanged="textBoxValue1 = $event"></cctext-input>
             <cc-image-upload @displayImageChanged="imageName = $event"></cc-image-upload><hr>
             <cctext-input @displayTextChanged="textBoxValue2 = $event"></cctext-input>
             <cctext-input @displayTextChanged="textBoxValue3 = $event"></cctext-input>
+            
             {{textBoxValue1}}
             {{textBoxValue2}}
             {{textBoxValue3}}
