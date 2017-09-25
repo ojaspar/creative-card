@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-sm-6 card edit-area">
             <cctext-input @displayTextChanged="textBoxValue1 = $event"></cctext-input>
+            <ccsection-Completed></ccsection-Completed>
         </div>
          <div class="col-sm-6 card card-display">
              <cctextOutput :displayText="textBoxValue1" :containerHeight="750"></cctextOutput>
@@ -12,6 +13,8 @@
 <script>
     import textInput from './textInput.vue'
     import textOutput from './textOutput.vue'
+    import sectionCompleted from './sectionCompleted.vue'
+
     
     export default {
         data: function() {
@@ -21,7 +24,8 @@
         },
         components:{
             cctextInput: textInput,
-            cctextOutput: textOutput
+            cctextOutput: textOutput,
+            ccsectionCompleted: sectionCompleted
         }
     }
 </script>

@@ -1,21 +1,18 @@
 <template>
     <div class="row">
         <div class="col-sm-6 card edit-area">
-            <cctext-input @displayTextChanged="textBoxValue1 = $event"></cctext-input>
-            <cctext-input @displayTextChanged="textBoxValue2 = $event"></cctext-input>
-            
-
+            <cc-image-upload @displayImageChanged="imageName = $event"></cc-image-upload>
+            <ccsection-completed></ccsection-completed>
         </div>
          <div class="col-sm-6 card card-display">
-            <cctextOutput :displayText="textBoxValue1" :containerHeight="370"></cctextOutput>        
-            <cctextOutput :displayText="textBoxValue2" :containerHeight="370"></cctextOutput>        
-                  
+            <cc-image-output :displayImage="imageName" :containerHeight="370"></cc-image-output>              
         </div>
     </div>
 </template>
 <script>
-    import textInput from './textInput.vue'
-    import textOutput from './textOutput.vue'
+    import ImageUpload from './ImageUpload.vue'
+    import ImageOutput from './ImageOutput.vue'
+    import sectionCompleted from './sectionCompleted.vue'
 
     export default {
         data: function () {
@@ -26,8 +23,9 @@
             }
         },
         components: {
-            cctextInput:textInput,
-            cctextOutput:textOutput
+            ccImageUpload:ImageUpload,
+            ccImageOutput:ImageOutput,
+            ccsectionCompleted: sectionCompleted
         }
     }
 </script>
