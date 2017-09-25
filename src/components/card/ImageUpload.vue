@@ -52,6 +52,9 @@ import Firebase from 'firebase'
            }
        }
    } 
+function setDraggable() {
+    $('#outputImage').draggable();
+}
 </script>
 <style scoped>
 img {
